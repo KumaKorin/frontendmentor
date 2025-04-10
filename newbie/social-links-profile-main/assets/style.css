@@ -5,6 +5,7 @@
 
 :root {
     --color-green: hsl(75, 94%, 57%);
+    --color-dark-green: hsl(75, 66%, 41%);
     --color-white: hsl(0, 0%, 100%);
     --color-grey-700: hsl(0, 0%, 20%);
     --color-grey-800: hsl(0, 0%, 12%);
@@ -89,17 +90,23 @@ body {
 .profile-social-link:hover {
     transform: scale(1.1);
     box-shadow: 5px 5px 15px var(--color-grey-900);
+    color: var(--color-grey-900);
+    background-color: var(--color-dark-green);
     transition-timing-function: ease-in;
 }
 
 @keyframes link-btn-hover {
     0% {
         box-shadow: 0px 0px 0px var(--color-grey-900);
+        color: var(--color-white);
+        background-color: var(--color-grey-700);
         transform: scale(1);
     }
 
     100% {
         box-shadow: 2px 2px 15px var(--color-grey-900);
+        color: var(--color-grey-900);
+        background-color: var(--color-dark-green);
         transform: scale(1.05);
     }
 }
