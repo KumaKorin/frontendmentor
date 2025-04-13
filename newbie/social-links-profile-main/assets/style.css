@@ -95,22 +95,6 @@ body {
     transition-timing-function: ease-in;
 }
 
-@keyframes link-btn-hover {
-    0% {
-        box-shadow: 0px 0px 0px var(--color-grey-900);
-        color: var(--color-white);
-        background-color: var(--color-grey-700);
-        transform: scale(1);
-    }
-
-    100% {
-        box-shadow: 2px 2px 15px var(--color-grey-900);
-        color: var(--color-grey-900);
-        background-color: var(--color-dark-green);
-        transform: scale(1.05);
-    }
-}
-
 .attribution {
     font-family: sans-serif;
     position: absolute;
