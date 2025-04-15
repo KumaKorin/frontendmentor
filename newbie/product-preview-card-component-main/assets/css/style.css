@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-primary-green-500: hsl(158, 36%, 37%);
+    --color-primary-green-700: hsl(158, 42%, 18%);
+    --color-neutral-black: hsl(212, 21%, 14%);
+    --color-neutral-grey: hsl(228, 12%, 48%);
+    --color-neutral-cream: hsl(30, 38%, 92%);
+    --color-neutral-white: hsl(0, 0%, 100%);
+    --font-size-default: 14px;
+    --font-family-default: 'Montserrat', sans-serif;
+    --font-family-heading: 'Fraunces', serif;
+    --border-radius-default: 12px;
+    --font-weight-default: 500;
+    --font-weight-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-neutral-cream);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.product-card {
+    background-color: var(--color-neutral-white);
+    border-radius: var(--border-radius-default);
+    margin: 1.4rem;
+    max-width: 420px;
+}
+
+.product-details {
+    padding: 16px;
+}
+
+.product-category {
+    font-size: var(--font-size-default);
+    font-family: var(--font-family-default);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-neutral-grey);
+    font-weight: var(--font-weight-default);
+}
+
+.product-title {
+    font-family: var(--font-family-heading);
+    color: var(--color-neutral-black);
+    font-size: 2rem;
+    padding: 12px 0px
+}
+
+.product-description {
+    font-family: var(--font-family-default);
+    font-weight: var(--font-weight-default);
+    color: var(--color-neutral-grey);
+    font-size: var(--font-size-default);
+}
+
+.product-price-section {
+    margin: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-current-price {
+    color: var(--color-primary-green-500);
+    font-family: var(--font-family-heading);
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.product-original-price {
+    color: var(--color-neutral-grey);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-default);
+    text-decoration: line-through;
+}
+
+.product-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1.2rem 0px;
+    background-color: var(--color-primary-green-500);
+    color: var(--color-neutral-white);
+    font-size: var(--font-size-default);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--border-radius-default);
+    border: none;
+    margin-bottom: 1rem;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+
+@media (max-width: 1023.99px) {
+    .product-image-for-desktop {
+        display: none;
+    }
+
+    .product-images>img {
+        width: 100%;
+        border-top-left-radius: var(--border-radius-default);
+        border-top-right-radius: var(--border-radius-default);
+    }
+
+    .product-button:active {
+        transform: scale(0.95);
+        background-color: var(--color-primary-green-700);
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .product-image-for-mobile {
+        display: none;
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: row;
+        max-width: 600px;
+    }
+
+    .product-images {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        margin-right: auto;
+    }
+
+    .product-image-for-desktop {
+        display: block;
+        max-width: 300px;
+        height: auto;
+        border-top-left-radius: var(--border-radius-default);
+        border-bottom-left-radius: var(--border-radius-default);
+    }
+
+    .product-details {
+        flex: 1;
+        margin: 1rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        max-width: 300px;
+    }
+
+    .product-category {
+        letter-spacing: 4px;
+    }
+
+    .product-description {
+        line-height: 1.4rem;
+    }
+
+    .product-price-section {
+        padding: 16px 0px;
+        padding-bottom: 0;
+    }
+
+    .product-button:hover {
+        transform: scale(1.05);
+    }
+
+    .product-button:active {
+        transform: scale(0.95);
+        background-color: var(--color-primary-green-700);
+    }
+}
