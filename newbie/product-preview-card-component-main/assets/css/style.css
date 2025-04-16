@@ -112,9 +112,29 @@ body {
 }
 
 
+.attribution {
+    font-family: sans-serif;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    text-align: center;
+    font-weight: 800;
+    color: rgb(39, 39, 39);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
 
 @media (max-width: 1023.99px) {
     .product-image-for-desktop {
+        display: none;
+    }
+
+    .attribution {
         display: none;
     }
 
