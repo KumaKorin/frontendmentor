@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap');
+
+:root {
+    /* Colors */
+    --color-purple-50: hsl(260, 100%, 95%);
+    --color-purple-300: hsl(264, 82%, 80%);
+    --color-purple-500: hsl(263, 55%, 52%);
+
+
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey-100: hsl(214, 17%, 92%);
+    --color-grey-200: hsl(0, 0%, 81%);
+    --color-grey-400: hsl(224, 10%, 45%);
+    --color-grey-500: hsl(217, 19%, 35%);
+    --color-dark-blue: hsl(219, 29%, 14%);
+    --color-black: hsl(0, 0%, 7%);
+
+    /* Fonts */
+    --font-family-default: 'Barlow Semi Condensed', sans-serif;
+    --font-size-default: 13px;
+    --font-weight-thin: 400;
+    --font-weight-regular: 500;
+    --font-weight-bold: 600;
+
+    /* Other */
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+
+body {
+    font-family: var(--font-family-default);
+    background-color: var(--color-grey-100);
+}
+
+.card_quotation-mark {
+    display: none;
+}
+
+.card {
+    margin: 3rem auto;
+    background-color: var(--color-grey-100);
+    border-radius: var(--border-radius);
+    padding: 2.2rem;
+    max-width: 260px;
+    box-shadow: 0px 0px 20px hsl(0, 0%, 0%, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card:active {
+    scale: 1.02;
+    box-shadow: 0px 0px 20px hsl(0, 0%, 0%, 0.4);
+}
+
+.card_author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card_author>img {
+    width: 35px;
+    border-radius: 100%;
+    border-style: solid;
+    margin-right: 1rem;
+}
+
+.card_author-wapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_author-name {
+    font-weight: var(--font-weight-regular);
+    font-size: calc(var(--font-size-default) + 3px);
+}
+
+.card_author-title {
+    font-weight: var(--font-weight-thin);
+    font-size: var(--font-size-default);
+    margin-top: auto;
+}
+
+.card_content-title {
+    font-size: calc(var(--font-size-default) + 8px);
+    margin-bottom: 1rem;
+}
+
+.card_content-testimonials {
+    font-size: calc(var(--font-size-default));
+    font-weight: var(--font-weight-thin);
+    line-height: calc(100% + 6px);
+    color: var(--color-grey-100);
+}
+
+.card_content-bg-light>.card_content-title,
+.card_content-bg-light>.card_content-testimonials,
+.card_author-bg-light .card_author-name,
+.card_author-bg-light .card_author-title {
+    color: var(--color-grey-100);
+}
+
+.card_content-bg-dark>.card_content-title,
+.card_content-bg-dark>.card_content-testimonials,
+.card_author-bg-dark .card_author-name,
+.card_author-bg-dark .card_author-title {
+    color: var(--color-grey-500);
+}
+
+.card_author-bg-dark img {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.card_author-bg-light img {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card_bg-darkblue {
+    background-color: var(--color-dark-blue);
+
+}
+
+.card_bg-white {
+    background-color: var(--color-white);
+}
+
+.card_bg-purple {
+    background-color: var(--color-purple-500);
+}
+
+.card_bg-grey {
+    background-color: var(--color-grey-500);
+}
+
+.attribution {
+    position: block;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--color-purple-500);
+}
+
+@media (min-width: 768px) {
+    .card {
+        max-width: 400px;
+    }
+
+    .attribution {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card_list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: calc(100vw - 2rem);
+        min-width: 1100px;
+        max-width: 1200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card_list article:nth-child(1) {
+        grid-column: 1 / 3;
+    }
+
+    .card_list article:nth-child(4) {
+        grid-row: 2 / 2;
+        grid-column: 2 / 4;
+    }
+
+    .card_list article:nth-child(5) {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+
+    .card {
+        margin: 1rem;
+        padding: 2.2rem;
+        max-width: 100%;
+        box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 1;
+    }
+
+    .card:hover {
+        box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.5);
+        scale: 1.02;
+    }
+
+    .card:active {
+        box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.6);
+        scale: 0.98;
+    }
+
+    .card_quotation-mark {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 80px;
+        z-index: -1;
+    }
+
+    .attribution {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+    }
+}
