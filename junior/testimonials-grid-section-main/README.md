@@ -12,7 +12,7 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 ### Links
 
-- Live Site URL: [URL](http://kumakorin.github.io/frontendmentor/newbie/testimonials-grid-section-main)
+- Live Site URL: [URL](http://kumakorin.github.io/frontendmentor/junior/testimonials-grid-section-main)
 ## My process
 
 ### Built with
